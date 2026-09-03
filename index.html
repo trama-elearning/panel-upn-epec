@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Panel de producción — UPN-EPEC</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;padding:32px 20px 56px;background:#f7f7f5;color:#1a1a17;
+     font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+     font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto}
+h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:650;letter-spacing:-.01em}
+h2{font-size:17px;margin:0 0 16px;font-weight:620}
+.sub{color:#6b6b62;font-size:14px;margin:0 0 28px}
+.card{background:#fff;border:1px solid #e7e7e2;border-radius:12px;padding:22px;margin-bottom:20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid #e7e7e2;border-radius:12px;padding:16px 18px}
+.kpi .n{font-size:27px;font-weight:660;letter-spacing:-.02em;line-height:1.15}
+.kpi .l{font-size:12.5px;color:#6b6b62;margin-top:4px}
+.kpi .n.rojo{color:#c0392b}
+.split{display:flex;height:26px;border-radius:6px;overflow:hidden;margin-bottom:14px;background:#efefea}
+.split div{height:100%}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.col h3{font-size:13.5px;margin:0 0 8px;font-weight:620;display:flex;align-items:center;gap:7px}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block;flex:none}
+.col ul{list-style:none;margin:0;padding:0}
+.col li{display:flex;justify-content:space-between;font-size:13.5px;
+        padding:5px 0;border-bottom:1px solid #f0f0eb;color:#3d3d36}
+.col li:last-child{border-bottom:0}
+.col li b{font-weight:600;color:#1a1a17}
+.fase{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:13.5px}
+.fase .nm{width:132px;flex:none;color:#3d3d36}
+.fase .track{flex:1;background:#f2f2ec;border-radius:5px;height:16px;overflow:hidden}
+.fase .fill{height:100%;border-radius:5px}
+.fase .qt{width:34px;flex:none;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-weight:600;font-size:12px;color:#6b6b62;
+   text-transform:uppercase;letter-spacing:.04em;padding:0 8px 9px 0;border-bottom:1px solid #e7e7e2}
+td{padding:9px 8px 9px 0;border-bottom:1px solid #f0f0eb;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.c a{color:#1a1a17;text-decoration:none;border-bottom:1px solid #d5d5cd}
+td.c a:hover{border-bottom-color:#1a1a17}
+td.c .sig{color:#6b6b62;font-variant-numeric:tabular-nums}
+.bads{display:flex;gap:4px}
+.bd{width:15px;height:15px;border-radius:4px;display:inline-block;flex:none}
+.pb{display:flex;align-items:center;gap:9px;min-width:132px}
+.pb .track{flex:1;background:#f2f2ec;border-radius:5px;height:8px;overflow:hidden}
+.pb .fill{height:100%;background:#4a4a42;border-radius:5px}
+.pb .pc{width:38px;text-align:right;font-variant-numeric:tabular-nums;color:#3d3d36}
+.leg{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:18px;
+     padding-top:16px;border-top:1px solid #f0f0eb;font-size:12.5px;color:#6b6b62}
+.leg span{display:flex;align-items:center;gap:6px}
+footer{color:#8a8a80;font-size:12.5px;text-align:center;margin-top:28px;line-height:1.6}
+@media(max-width:640px){
+  .cols{grid-template-columns:1fr}
+  .fase .nm{width:104px}
+  table{font-size:12.5px}
+}
+</style></head><body><div class="wrap">
+<h1>Panel de producción — UPN-EPEC</h1>
+<p class="sub">Actualizado el 3 de septiembre de 2026</p>
+<div class="kpis">
+<div class="kpi"><div class="n">78.4%</div><div class="l">Avance promedio</div></div>
+<div class="kpi"><div class="n">20/20</div><div class="l">Material recibido</div></div>
+<div class="kpi"><div class="n rojo">150</div><div class="l">Entregables atrasados</div></div>
+<div class="kpi"><div class="n">37%</div><div class="l">De los atrasados, espera al cliente</div></div>
+<div class="kpi"><div class="n">1</div><div class="l">En backlog (sin iniciar)</div></div>
+</div>
+<div class="card">
+<h2>Atraso: cliente vs. equipo</h2>
+<div class="split">
+<div style="width:37%;background:#00838f"></div>
+<div style="width:63%;background:#e57373"></div>
+</div>
+<div class="cols">
+<div class="col">
+<h3><span class="dot" style="background:#00838f"></span>Esperando al cliente — 55 (37%)</h3>
+<ul>
+<li><span>Temas</span><b>18</b></li>
+<li><span>Videos</span><b>13</b></li>
+<li><span>Podcasts</span><b>24</b></li>
+</ul></div>
+<div class="col">
+<h3><span class="dot" style="background:#e57373"></span>Depende del equipo — 95 (63%)</h3>
+<ul>
+<li><span>En producción</span><b>10</b></li>
+<li><span>QA/Correcciones</span><b>2</b></li>
+<li><span>Correcciones</span><b>41</b></li>
+<li><span>Montaje BB</span><b>41</b></li>
+<li><span>QA BB</span><b>1</b></li>
+</ul></div>
+</div></div>
+<div class="card">
+<h2>Entregables por fase (160 en total)</h2>
+<div class="fase"><span class="nm">Backlog</span><span class="track"><span class="fill" style="width:1.8%;background:#9e9e9e"></span></span><span class="qt">1</span></div>
+<div class="fase"><span class="nm">En producción</span><span class="track"><span class="fill" style="width:34.5%;background:#26a69a"></span></span><span class="qt">19</span></div>
+<div class="fase"><span class="nm">QA/Correcciones</span><span class="track"><span class="fill" style="width:3.6%;background:#f4c430"></span></span><span class="qt">2</span></div>
+<div class="fase"><span class="nm">Correcciones</span><span class="track"><span class="fill" style="width:74.5%;background:#e57373"></span></span><span class="qt">41</span></div>
+<div class="fase"><span class="nm">Montaje BB</span><span class="track"><span class="fill" style="width:74.5%;background:#8d6e63"></span></span><span class="qt">41</span></div>
+<div class="fase"><span class="nm">QA BB</span><span class="track"><span class="fill" style="width:1.8%;background:#9ccc65"></span></span><span class="qt">1</span></div>
+<div class="fase"><span class="nm">QA Cliente BB</span><span class="track"><span class="fill" style="width:100.0%;background:#6d4c41"></span></span><span class="qt">55</span></div>
+</div>
+<div class="card">
+<h2>Avance por curso</h2>
+<table><thead><tr><th>Curso</th><th>Entregables</th><th>Avance</th></tr></thead><tbody>
+<tr><td class="c"><span class="sig">C01.</span> <a href="https://www.wrike.com/open.htm?id=4523018782" target="_blank" rel="noopener noreferrer">Desarrollo sostenible en políticas públicas</a> <span class="sig">(DSP)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#e57373" title="Tema 1: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#9e9e9e" title="Blackboard: Backlog"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:73%"></span></span><span class="pc">73%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C02.</span> <a href="https://www.wrike.com/open.htm?id=4524898920" target="_blank" rel="noopener noreferrer">Gestión de la sostenibilidad</a> <span class="sig">(GSO)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:79%"></span></span><span class="pc">79%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C03.</span> <a href="https://www.wrike.com/open.htm?id=4524634927" target="_blank" rel="noopener noreferrer">Storytelling y visualización de datos</a> <span class="sig">(SVD)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Video: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:77%"></span></span><span class="pc">77%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C04.</span> <a href="https://www.wrike.com/open.htm?id=4524778354" target="_blank" rel="noopener noreferrer">Transformación digital y management 3.0</a> <span class="sig">(TDM)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#e57373" title="Tema 1: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Video: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:73%"></span></span><span class="pc">73%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C05.</span> <a href="https://www.wrike.com/open.htm?id=4524782751" target="_blank" rel="noopener noreferrer">Transformación e innovación en el aula</a> <span class="sig">(TIA)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#8d6e63" title="Tema 1: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Video: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:76%"></span></span><span class="pc">76%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C06.</span> <a href="https://www.wrike.com/open.htm?id=4524900658" target="_blank" rel="noopener noreferrer">Fundamentos de inteligencia artificial</a> <span class="sig">(FIA)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:82%"></span></span><span class="pc">82%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C07.</span> <a href="https://www.wrike.com/open.htm?id=4524901221" target="_blank" rel="noopener noreferrer">Gerencia de proyectos de inversión en salud</a> <span class="sig">(GPS)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:81%"></span></span><span class="pc">81%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C08.</span> <a href="https://www.wrike.com/open.htm?id=4524779428" target="_blank" rel="noopener noreferrer">Gerencia de Desarrollo del talento humano en salud</a> <span class="sig">(GTH)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Tema 2: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Video: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:78%"></span></span><span class="pc">78%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C09.</span> <a href="https://www.wrike.com/open.htm?id=4524780823" target="_blank" rel="noopener noreferrer">Sistema de gestión integral</a> <span class="sig">(SGI)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:81%"></span></span><span class="pc">81%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C10.</span> <a href="https://www.wrike.com/open.htm?id=4524781678" target="_blank" rel="noopener noreferrer">Salud ocupacional y ambiental</a> <span class="sig">(SOA)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#9ccc65" title="Video: QA BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:81%"></span></span><span class="pc">81%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C11.</span> <a href="https://www.wrike.com/open.htm?id=4524901417" target="_blank" rel="noopener noreferrer">Gestión y mejora continua en salud</a> <span class="sig">(GMC)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Tema 2: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:83%"></span></span><span class="pc">83%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C12.</span> <a href="https://www.wrike.com/open.htm?id=4524900160" target="_blank" rel="noopener noreferrer">Trastornos psicológicos y modelos experimentales actualizados</a> <span class="sig">(TPM)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:78%"></span></span><span class="pc">78%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C13.</span> <a href="https://www.wrike.com/open.htm?id=4524783880" target="_blank" rel="noopener noreferrer">Evaluación y psicoterapia en los trastornos de personalidad, somatomorfos, impulso y psicosis</a> <span class="sig">(PTP)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:82%"></span></span><span class="pc">82%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C14.</span> <a href="https://www.wrike.com/open.htm?id=4524901945" target="_blank" rel="noopener noreferrer">Evaluación y tratamiento de los trastornos alimentarios, sueño, emergencias y desastres</a> <span class="sig">(TAE)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Tema 2: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:82%"></span></span><span class="pc">82%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C15.</span> <a href="https://www.wrike.com/open.htm?id=4524784878" target="_blank" rel="noopener noreferrer">Dirección de operaciones</a> <span class="sig">(DOP)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:79%"></span></span><span class="pc">79%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C16.</span> <a href="https://www.wrike.com/open.htm?id=4524902263" target="_blank" rel="noopener noreferrer">Ciencia de datos para la toma de decisiones</a> <span class="sig">(CDT)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:82%"></span></span><span class="pc">82%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C17.</span> <a href="https://www.wrike.com/open.htm?id=4524902858" target="_blank" rel="noopener noreferrer">Normas nacionales y estándares internacionales ISO 45001-2018 - ISO 14001-2015</a> <span class="sig">(NSE)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#8d6e63" title="Tema 1: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#f4c430" title="Tema 4: QA/Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Video: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:70%"></span></span><span class="pc">70%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C18.</span> <a href="https://www.wrike.com/open.htm?id=4524785974" target="_blank" rel="noopener noreferrer">Negociación y gestión de conflictos</a> <span class="sig">(NGC)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 3: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:81%"></span></span><span class="pc">81%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C19.</span> <a href="https://www.wrike.com/open.htm?id=4524786714" target="_blank" rel="noopener noreferrer">Negociación y resolución de conflictos en el estado</a> <span class="sig">(NRC)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#6d4c41" title="Tema 1: QA Cliente BB"></span>
+<span class="bd" style="background:#8d6e63" title="Tema 2: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 4: Correcciones"></span>
+<span class="bd" style="background:#6d4c41" title="Video: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #1: QA Cliente BB"></span>
+<span class="bd" style="background:#6d4c41" title="Podcast #2: QA Cliente BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:81%"></span></span><span class="pc">81%</span></span></td></tr>
+<tr><td class="c"><span class="sig">C20.</span> <a href="https://www.wrike.com/open.htm?id=4524903205" target="_blank" rel="noopener noreferrer">Legislación en seguridad y salud en el trabajo</a> <span class="sig">(LST)</span></td>
+<td><span class="bads">
+<span class="bd" style="background:#8d6e63" title="Tema 1: Montaje BB"></span>
+<span class="bd" style="background:#e57373" title="Tema 2: Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Tema 3: Correcciones"></span>
+<span class="bd" style="background:#f4c430" title="Tema 4: QA/Correcciones"></span>
+<span class="bd" style="background:#e57373" title="Video: Correcciones"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #1: Montaje BB"></span>
+<span class="bd" style="background:#8d6e63" title="Podcast #2: Montaje BB"></span>
+<span class="bd" style="background:#26a69a" title="Blackboard: En producción"></span>
+</span></td>
+<td><span class="pb"><span class="track"><span class="fill" style="width:70%"></span></span><span class="pc">70%</span></span></td></tr>
+</tbody></table>
+<div class="leg">
+<span><i class="dot" style="background:#9e9e9e"></i>Backlog</span>
+<span><i class="dot" style="background:#26a69a"></i>En producción</span>
+<span><i class="dot" style="background:#f4c430"></i>QA/Correcciones</span>
+<span><i class="dot" style="background:#e57373"></i>Correcciones</span>
+<span><i class="dot" style="background:#8d6e63"></i>Montaje BB</span>
+<span><i class="dot" style="background:#9ccc65"></i>QA BB</span>
+<span><i class="dot" style="background:#6d4c41"></i>QA Cliente BB</span>
+</div>
+</div>
+<footer>Los datos provienen directamente de Wrike (proyecto UPN-EPEC).<br>El panel se actualiza automáticamente cada mañana.</footer>
+</div></body></html>
